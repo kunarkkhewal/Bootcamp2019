@@ -1,0 +1,138 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    color: #797979;
+}
+
+.container{
+    margin: 2% 30%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+
+.container-form{
+    padding: 1% 5%;
+    display: block;
+}
+
+.container-header{
+    margin: 0%;
+    padding: 2% 0;
+}
+
+
+.block{
+    display: block;
+}
+
+h1{
+    color: #00c79a;
+}
+
+header{
+    color: #00c79a;
+    /* display: inline-block; */
+    padding-bottom: 20%;
+}
+
+a{
+    text-decoration: none;
+    color: #00c79a;
+}
+
+li{
+    list-style: none;
+    float: right;
+}
+
+li a{
+    margin: 0 1em;
+
+}
+
+#left{
+    float: left;
+}
+
+#right{
+    float: right;
+    display: inline-block; 
+}
+
+h2{
+    color: white;
+    background-color: #bcc0ca;
+    margin: 0 0 10px 0;
+    padding: 1% 5%;    
+    height: 50%;
+}
+
+#Title, #Desc, #OS, #Severity, #Attachments, #Prod, #ver{
+    width: 100%;
+    height: 2.5em;
+    margin: .5% 0 2% 0;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+}
+
+select{
+    background-color: #00c79a;
+}
+
+#Desc{
+    height: 100%;
+}
+
+.label{
+    margin:2% 0;
+}
+
+#free{
+    margin-right: 50%;
+}
+
+input[type="file"]{
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+}
+
+span{
+    margin-right: 40%;
+}
+
+#OS, #Prod, #Severity{
+    color: white;
+}
+
+input[type="submit"]{
+    margin-bottom: 0;
+    background-color: #00c79a;
+    border: 0;
+    margin-right: 0%;
+    color: white;
+    padding: 1.5%;
+    width: 10%;
+    border-radius: 4px;
+}
+
+#send{
+    background-color: #edeef1;
+    height: 5%;
+    padding-bottom: 5%;
+    position: relative;
+    border-top: 1px solid lightgray;
+}
+
+#ver{
+    width: 20%;
+}
+
+#Send{
+    padding: 1% 5% 1% 2%; 
+    position: absolute;
+    right: 4.5%;
+    bottom: 20%;
+}

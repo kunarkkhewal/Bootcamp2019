@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta id="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>form</title>
+</head>
+
+<body>
+    <header class="container-header">
+        <div id="left">
+            <h1>TO THE NEW</h1>
+        </div>
+        <div id="right">
+            <ul>
+                <li> <a href="#">Home</a> </li>
+                <li> <a href="#">Quick Help</a> </li>
+            </ul>
+        </div>
+    </header>
+
+    <hr>
+
+    <div class="container">
+        <h2>Bug Report</h2>
+        <form id="my-form" class="container-form">
+
+            <label class="label" for="Title">Title:*</label>
+            <input id="Title" type="text" required>
+
+            <label class="label" for="Desc">Description:*</label>
+            <textarea id="Desc" cols="30" rows="5" required></textarea>
+
+            <label class="label" for="OS">Operating system:</label>
+            <Select id="OS">
+                <option value="Windows XP">Windows XP</option>
+                <option value="Ubuntu">Ubuntu</option>
+                <option value="Mac OS">Mac OS</option>
+                <option value="Kali Linux">Kali Linux</option>
+            </Select>
+
+            <label class="label" for="Prod">Product:*</label>
+            <Select id="Prod" required>
+                <option value="Formoid">Formoid</option>
+                <option value="Formoid">Formoid</option>
+                <option value="Formoid">Formoid</option>
+                <option value="Formoid">Formoid</option>
+            </Select>
+
+            <label class="label" for="ver">Version:*</label><br>
+            <input id="ver" type="text" required>
+<br>
+            <label class="label" for="licence">Licence:</label><br>
+            <span>
+                <input id="licence" type="radio" value="Free">Free
+            </span>
+            <span>
+                <input id="licence" type="radio" value="Business">Bussiness
+            </span>
+
+
+            <br><br>
+            <label class="label" for="Severity">Severity:</label>
+            <Select id="Severity">
+                <option value="Critical">Critical</option>
+                <option value="Difficult">Difficult</option>
+                <option value="Medium">Medium</option>
+                <option value="Easy">Easy</option>
+            </Select>
+
+            <label class="label" for="Attachments">Attachments:</label><br>
+            <input type="file" value="Choose File">
+            <br>
+        </form>
+        <div id="send">
+            <label class="label" for="Send"></label><br>
+            <input id="Send" form="my-form" type="submit" value="Send">
+        </div>
+    </div>
+
+</body>
+
+</html>
