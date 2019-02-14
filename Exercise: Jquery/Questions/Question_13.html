@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<!-- Get the max height of elements using jquery each method -->
+
+<body>
+
+    <ul>
+        <li>hello</li> <br> <hr>
+
+        <li>hrlo <br></li> <br> <hr>
+
+        <li><br> hello <br></li> <br> <hr>
+
+        <li>hrl <br> hwk <br> hi</li> <br> <hr>
+
+        <li>ffff</li>
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"> </script>
+
+    <script>
+        $(function () {
+            var max = -1;
+            var content = 0;
+
+            $("li").each(function () {
+                var h = $(this).height();
+                if (h > max) {
+                    max = h;
+                    content = $(this).html();
+                }
+            });
+            $("ul").append('<br><br> Maximum height is : ' + max + '<br> of element : <br>' + content);
+        })
+
+
+    </script>
+
+</body>
+
+</html>

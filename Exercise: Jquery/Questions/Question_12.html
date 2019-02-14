@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<!-- We have bind a click funtion to parent div but we want stop it from performing when user clicks on its child li -->
+
+<body>
+
+    <div id="parent">
+        Text in div outside any ul
+        <ul id="parent_ul">
+            <li class="parent_li"> parent li 1
+                <ul class="child_ul">
+                    <li class="child_li">ul1 li1</li>
+                    <li class="child_li">ul1 li2</li>
+                </ul>
+            </li>
+            <li class="parent_li">
+                <ul class="child_ul"> parent li 2
+                    <li class="child_li">ul2 li1</li>
+                    <li class="child_li">ul2 li2</li>
+                </ul>
+            </li>
+            <li class="parent_li">
+                <ul class="child_ul"> parent li 3
+                    <li class="child_li">ul3 li1</li>
+                    <li class="child_li">ul3 li2</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"> </script>
+
+    <script>
+        // $(function () {
+        //     $('#parent').click(function () {
+        //         alert("clicked");
+        //     })
+        // })
+        $("#parent").click(
+            function () {
+                $(".parent_li").click(function () {
+                    alert("child clicked, TRY TO CLICK DIV ELEMENT");
+                    event.stopPropagation();
+
+                })
+            }
+        )
+    </script>
+</body>
+
+</html>

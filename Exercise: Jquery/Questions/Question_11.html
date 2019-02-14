@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<!-- On clicking on "google" tag. It is taking us to google home page. Stop it from happening. -->
+
+<body>
+   
+    <a href="https://www.google.com">This link to google will work</a> <br><br>
+    <a href="https://www.google.com" id="off"> This link to google Won't Work</a>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"> </script>
+
+    <script>
+        $(function(){
+            $("#off").on('click',function(e){
+                e.preventDefault();
+            })
+        })
+    </script>
+
+</body>
+
+</html>

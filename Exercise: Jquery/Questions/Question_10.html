@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul{
+            display: none;
+        }
+
+    </style>
+</head>
+
+<!-- Create a dropdown menu using hover method in jquery -->
+
+<body>
+
+    <div id="menu">
+        <h3>Hover over MEE</h3>
+        <ul id="dropdown">
+            <li>Option One
+                <ul class="dropdown-menu">
+                    <li>Dropdown Link</li>
+                    <li>Another Dropdown Link</li>
+                </ul>
+            </li>
+            <li>Option Two
+                <ul class="dropdown-menu">
+                    <li>Dropdown Link</li>
+                    <li>Another Dropdown Link</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"> </script>
+
+    <script>
+    
+        $(document).ready(function () {
+
+            $("#menu").hover(function(){
+                $("#dropdown").slideDown(500);
+            },function(){
+                $("#dropdown").slideUp(500);
+            })
+
+            $("#dropdown li").hover(function () {
+                $(".dropdown-menu", this).slideDown(500);
+            }, function () {
+                $(".dropdown-menu", this).slideUp(500);
+            });
+        })
+
+    </script>
+
+</body>
+
+</html>

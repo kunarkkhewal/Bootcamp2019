@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<!-- Select a ID name "#test" and add class "load" when DOM is loaded -->
+
+<body>
+
+    <div id="test">I have Id test but inspect me i might have a class also attached</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"> </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#test").addClass("load");
+        });
+    </script>
+</body>
+
+</html>

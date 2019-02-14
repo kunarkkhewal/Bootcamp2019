@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<!-- Add cross button on row and bind click function which make a delete request to server, after success event remove the row from dom -->
+
+<body>
+    <div id="dat"></div>
+    <button id="add">show</button>
+    <button id="del">delete</button>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"> </script>
+
+
+    <script>
+        $(function () {
+            $('button#add').on('click', function () {
+                $.ajax({
+                    url: "https://jsonplaceholder.typicode.com/todos/1", 
+                    type: 'GET', 
+                    success: function (result) {
+                        $('#dat').html('<div>' + result.title + '</div>')
+                        console.log(result);
+                    }
+                })
+
+            })
+            $("button#del").on('click', function () {
+                $.ajax({
+                    url: "https://jsonplaceholder.typicode.com/todos/1",
+                    dataType: "json",
+                    type: "DELETE",
+                    success: function (data) {
+                        $('#dat').remove();
+                        alert("deleted successfully")
+                    },
+                    error: function (data) {
+                        alert("error deleting");
+                    }
+                });
+            })
+
+        })
+    </script>
+
+</body>
+
+</html>

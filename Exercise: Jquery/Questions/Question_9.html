@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<!-- Get dropdown selected value on onchanage event and append in div container -->
+
+<body>
+   
+    <form>
+        <label for="select">Please do selection: </label><br>
+        <select name="selection" id="select">
+            <option value="option 1">option 1</option>
+            <option value="option 2">option 2</option>
+            <option value="option 3">option 3</option>
+            <option value="option 4">option 4</option>
+            <option value="option 5">option 5</option>
+        </select>
+    </form>
+
+    <div>
+        <br> List of Selected options <br>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"> </script>
+
+    <script>
+        var counter = 0;
+
+        $(function(){
+            $("#select").on("change",function(){
+                var textdata = $(this).find('option:selected').text();
+                $("div").append(++counter + ' : ' + textdata + '<br>');
+            });
+            
+        })
+    </script>
+
+</body>
+
+</html>
