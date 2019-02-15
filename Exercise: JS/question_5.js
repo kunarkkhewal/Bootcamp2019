@@ -56,8 +56,8 @@ console.log("");
 
 //Filter for salary greater then 5000
 
-var salFilter = [];
-salFilter = Employee.filter(function(emp){
+//var salFilter = [];
+const salFilter = Employee.filter(function(emp){
     if(emp.salary > 5000){
         // salFilter.push(emp);
         return emp;
