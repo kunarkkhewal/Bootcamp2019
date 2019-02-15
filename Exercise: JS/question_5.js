@@ -57,9 +57,10 @@ console.log("");
 //Filter for salary greater then 5000
 
 var salFilter = [];
-Employee.filter(function(emp){
+salFilter = Employee.filter(function(emp){
     if(emp.salary > 5000){
-        salFilter.push(emp);
+        // salFilter.push(emp);
+        return emp;
     }
 });
 
@@ -77,23 +78,20 @@ console.log("");
 
 
 
-
-
-
 // group employee on basis of age
 
 console.log("Grouped by Age: ")
 
 var group_10_20 = [];
 var group_20_30 = [];
-var group_30_40 = [];
+var group_30 = [];
 var groupByAge = Employee.filter(function(emp){
     if(emp.age < 20 && emp.age >= 10){
         group_10_20.push(emp);
     }else if(emp.age < 30 && emp.age >= 20){
         group_20_30.push(emp);
     }else{
-        group_30_40.push(emp);
+        group_30.push(emp);
     }
 });
 
@@ -107,8 +105,8 @@ group_20_30.forEach(function(element){
     console.log(element);
 });
 
-console.log("Employee in age group of 30 to 40 ");
-group_30_40.forEach(function(element){
+console.log("Employee in age group of 30+ ");
+group_30.forEach(function(element){
     console.log(element);
 });
 
